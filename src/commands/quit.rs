@@ -12,7 +12,7 @@ impl StreamCommand for QuitCommand {
     }
 
     fn receive(&self, message: String) -> Result<Self::Response> {
-        dbg!(&message);
+        log::debug!("{}", &message);
         if message.starts_with("ENDED ") {
             Ok(true)
         } else {

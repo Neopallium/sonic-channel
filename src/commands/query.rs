@@ -41,7 +41,7 @@ impl StreamCommand for QueryCommand<'_> {
             static ref RE: Regex = Regex::new(RE_QUERY_RECEIVED_MESSAGE).unwrap();
         }
 
-        dbg!(&message);
+        log::debug!("{}", &message);
 
         if let Some(caps) = RE.captures(&message) {
             if caps["pending_query_id"] != caps["event_query_id"] {

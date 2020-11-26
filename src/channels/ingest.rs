@@ -177,7 +177,7 @@ impl IngestChannel {
         /// )?;
         ///
         /// let flushc_count = ingest_channel.flushc("search")?;
-        /// dbg!(flushc_count);
+        /// log::debug!("{}", flushc_count);
         /// # Ok(())
         /// # }
         /// ```
@@ -201,7 +201,7 @@ impl IngestChannel {
         /// )?;
         ///
         /// let flushb_count = ingest_channel.flushb("search", "default")?;
-        /// dbg!(flushb_count);
+        /// log::debug!("{}", flushb_count);
         /// # Ok(())
         /// # }
         /// ```
@@ -226,7 +226,7 @@ impl IngestChannel {
         /// )?;
         ///
         /// let flusho_count = ingest_channel.flusho("search", "default", "recipe:296")?;
-        /// dbg!(flusho_count);
+        /// log::debug!("{}", flusho_count);
         /// # Ok(())
         /// # }
         /// ```
@@ -252,7 +252,7 @@ impl IngestChannel {
         /// )?;
         ///
         /// let bucket_count = ingest_channel.bucket_count("search")?;
-        /// dbg!(bucket_count);
+        /// log::debug!("{}", bucket_count);
         /// # Ok(())
         /// # }
         /// ```
@@ -276,7 +276,7 @@ impl IngestChannel {
         /// )?;
         ///
         /// let object_count = ingest_channel.object_count("search", "default")?;
-        /// dbg!(object_count);
+        /// log::debug!("{}", object_count);
         /// # Ok(())
         /// # }
         /// ```
@@ -301,7 +301,7 @@ impl IngestChannel {
         /// )?;
         ///
         /// let word_count = ingest_channel.word_count("search", "default", "recipe:296")?;
-        /// dbg!(word_count);
+        /// log::debug!("{}", word_count);
         /// # Ok(())
         /// # }
         /// ```

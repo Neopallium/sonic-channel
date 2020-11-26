@@ -83,7 +83,7 @@ impl SearchChannel {
         /// )?;
         ///
         /// let result = search_channel.query("search", "default", "Beef")?;
-        /// dbg!(result);
+        /// log::debug!(result);
         /// # Ok(())
         /// # }
         /// ```
@@ -115,7 +115,7 @@ impl SearchChannel {
         ///     "Beef",
         ///     10,
         /// )?;
-        /// dbg!(result);
+        /// log::debug!(result);
         /// # Ok(())
         /// # }
         /// ```
@@ -149,7 +149,7 @@ impl SearchChannel {
         ///     10,
         ///     10,
         /// )?;
-        /// dbg!(result);
+        /// log::debug!(result);
         /// # Ok(())
         /// # }
         /// ```
@@ -177,7 +177,7 @@ impl SearchChannel {
         /// )?;
         ///
         /// let result = search_channel.suggest("search", "default", "Beef")?;
-        /// dbg!(result);
+        /// log::debug!(result);
         /// # Ok(())
         /// # }
         /// ```
@@ -203,7 +203,7 @@ impl SearchChannel {
         /// )?;
         ///
         /// let result = search_channel.suggest_with_limit("search", "default", "Beef", 5)?;
-        /// dbg!(result);
+        /// log::debug!(result);
         /// # Ok(())
         /// # }
         /// ```

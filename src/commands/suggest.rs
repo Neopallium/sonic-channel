@@ -37,7 +37,7 @@ impl StreamCommand for SuggestCommand<'_> {
             static ref RE: Regex = Regex::new(RE_SUGGEST_RECEIVED_MESSAGE).unwrap();
         }
 
-        dbg!(&message);
+        log::debug!("{}", &message);
 
         match RE.captures(&message) {
             None => Err(Error::new(ErrorKind::WrongSonicResponse)),

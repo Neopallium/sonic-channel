@@ -12,7 +12,7 @@ impl StreamCommand for PingCommand {
     }
 
     fn receive(&self, message: String) -> Result<Self::Response> {
-        dbg!(&message);
+        log::debug!("{}", &message);
         if message == "PONG\r\n" {
             Ok(true)
         } else {

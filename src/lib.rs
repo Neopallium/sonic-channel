@@ -18,7 +18,7 @@
 //!     )?;
 //!
 //!     let objects = channel.query("collection", "bucket", "recipe")?;
-//!     dbg!(objects);
+//!     log::debug!("{}", objects);
 //!
 //!     Ok(())
 //! }
@@ -40,7 +40,7 @@
 //!     let pushed = channel.push("collection", "bucket", "object:1", "my best recipe")?;
 //!     // or
 //!     // let pushed = channel.push_with_locale("collection", "bucket", "object:1", "Мой лучший рецепт", "rus")?;
-//!     dbg!(pushed);
+//!     log::debug!("{}", pushed);
 //!
 //!     Ok(())
 //! }
