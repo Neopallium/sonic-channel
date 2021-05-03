@@ -16,6 +16,7 @@ impl StreamCommand for QuitCommand {
         if message.starts_with("ENDED ") {
             Ok(true)
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::WrongSonicResponse))
         }
     }

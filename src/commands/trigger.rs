@@ -41,6 +41,7 @@ impl StreamCommand for TriggerCommand<'_> {
         if message == "OK\r\n" {
             Ok(true)
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::WrongSonicResponse))
         }
     }

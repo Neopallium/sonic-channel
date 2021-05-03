@@ -40,7 +40,10 @@ impl StreamCommand for SuggestCommand<'_> {
         log::debug!("{}", &message);
 
         match RE.captures(&message) {
-            None => Err(Error::new(ErrorKind::WrongSonicResponse)),
+            None => {
+                log::error!("{}", &message);
+                Err(Error::new(ErrorKind::WrongSonicResponse))
+            }
             Some(caps) => {
                 if caps["pending_suggest_id"] != caps["event_suggest_id"] {
                     Err(Error::new(ErrorKind::QueryResponseError(

@@ -33,6 +33,7 @@ impl StreamCommand for FlushCommand<'_> {
                 ))
             })
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::WrongSonicResponse))
         }
     }

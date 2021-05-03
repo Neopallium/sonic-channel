@@ -56,6 +56,7 @@ impl StreamCommand for StartCommand {
                 })
             }
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::SwitchMode))
         }
     }

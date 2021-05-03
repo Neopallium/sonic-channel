@@ -16,6 +16,7 @@ impl StreamCommand for PingCommand {
         if message == "PONG\r\n" {
             Ok(true)
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::WrongSonicResponse))
         }
     }

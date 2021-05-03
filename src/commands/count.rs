@@ -33,6 +33,7 @@ impl StreamCommand for CountCommand<'_> {
                 ))
             })
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::WrongSonicResponse))
         }
     }

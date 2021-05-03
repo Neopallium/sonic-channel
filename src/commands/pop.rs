@@ -30,6 +30,7 @@ impl StreamCommand for PopCommand<'_> {
                 ))
             })
         } else {
+            log::error!("{}", &message);
             Err(Error::new(ErrorKind::WrongSonicResponse))
         }
     }
